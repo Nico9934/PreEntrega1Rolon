@@ -14,11 +14,11 @@ const NavBar = () => {
         </div>
         <nav className='header__nav'>
             <ul className='header__ul'>
-                <li href="#" className='header__li'>Verduras</li>
-                <li href="#" className='header__li'>Frutas</li>
-                <li href="#" className='header__li'>¿Quienes somos?</li>
-                <li href="#" className='header__li'>¿Qué es el IQF?</li>
-                <li href="#" className='header__li'>Contacto</li>
+                <li className='header__li'><a href="#verduras">Verduras</a> </li>
+                <li className='header__li'><a href="#frutas">Frutas</a> </li>
+                <li className='header__li'><a href="#about">¿Quienes somos?</a>  </li>
+                <li className='header__li'><a href="#iqf">¿Qué es el IQF?</a></li>
+                <li className='header__li'><a href="#contact">Contacto</a> </li>
             </ul>
         </nav>
 
