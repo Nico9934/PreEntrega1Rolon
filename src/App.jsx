@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Footer from './components/Footer'
 import ItemListContainer from './components/ItemListContainer'
 import NavBar from './components/NavBar'
@@ -9,7 +8,9 @@ function App() {
   return (
     <>
        <NavBar></NavBar>
-       <ItemListContainer></ItemListContainer>
+       <ItemListContainer
+          greeting="Esto es un container de productos"
+       ></ItemListContainer>
        <Footer></Footer>
     </>
 

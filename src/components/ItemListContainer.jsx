@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
-import Item from './Item'
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
   
+    const {greeting} = props
+
  
   return (
     <>
-    <section id='vegetales'>
-      <h1>Vegetales</h1>
-      <Item />
+    <section className='itemlist' id='vegetales'>
+      <div className="container">
+        <div className='itemlist__container'>
+          <h1 className='itemlist__title'>{greeting}</h1>
+        </div>
+      </div>
     </section>
     </>
   )
