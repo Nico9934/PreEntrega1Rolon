@@ -1,7 +1,12 @@
-import React from 'react'
 import CartWidget from './CartWidget'
+import { useState } from 'react'
+import MenuCartWidget from './MenuCartWidget';
 
-const NavBar = () => {
+
+const NavBar = ({cartItems, setCartItems, agregarProducto, removeProduct}) => {
+
+  const [showMenu, setShowMenu] = useState(true);
+
   return (
     <header className='header'>
       <div className='header__container container'>
@@ -22,7 +27,21 @@ const NavBar = () => {
             </ul>
         </nav>
 
-        <CartWidget/>
+        <CartWidget
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          agregarProducto={agregarProducto}
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+        />
+        {
+          showMenu &&
+            <MenuCartWidget
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+              removeProduct={removeProduct}
+            />
+        }
       </div>
     </header>
   )
